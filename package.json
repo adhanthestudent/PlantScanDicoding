@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "build": "npx webpack --config webpack.prod.js",
+    "postinstall": "chmod -R +x node_modules/.bin",
+
+    "build": "webpack --config webpack.prod.js",
     "start-dev": "webpack serve --config webpack.prod.js",
     "serve": "http-server dist"
   },
